@@ -118,7 +118,7 @@ To correct,
 
 a. create an outer function 
 
-b. give it a parameter ; the parameter will be used a variable within the function's execution context 
+b. give it a parameter ; the parameter will be used as a variable within the function's execution context 
 
 so the code goes :
 
@@ -126,7 +126,7 @@ so the code goes :
 
 ```;
 var arr = [];
-far(var i = 0 ; i < 5; i++){
+for(var i = 0 ; i < 5; i++){
     arr[i] = function(){      //create an outer function
         return function(){     //set return inner function 
             return i;
@@ -142,7 +142,7 @@ for(var index in arr){
 
 ```
 var arr = [];
-far(var i = 0 ; i < 5; i++){
+for(var i = 0 ; i < 5; i++){
     arr[i] = function(id){      //give a parameter, id; id to be used as a local variable
         return function(){    
             return id;       //change i to id;then, id will refer to id of the outer func
