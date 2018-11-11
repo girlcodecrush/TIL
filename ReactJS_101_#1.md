@@ -561,7 +561,7 @@ Not all lists need to have `keys`. A list needs `keys` if either of the followin
 ```
 const people = ['Rowe', 'Prevost', 'Gare'];
 
-const peopleLis = people.map((person, i) =>
+const peopleList = people.map((person, i) =>
   // expression goes here:
   <li key={'person_' + i}>{person}</li>
 );
@@ -571,26 +571,12 @@ ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
 ```
 
 1. 
+
 2. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-3. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-4. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-5. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
-6. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-7. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
-8. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-9. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
-10. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-11. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
-12. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-13. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
-14. The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
-15. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
 
-The list-items have *memory* from one render to the next. For instance, when a to-do list renders, each item must "remember" whether it was checked off. The items shouldn't get amnesia when they render.
+3. A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
 
-2.
-
-A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
+   
 
 # React.createElement
 
@@ -631,9 +617,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //declare a new component class, 'MyComponentClass', for building React components
-//React.component is a class, NOT a component --> from here, you must subclass in //order to create a component class of your own
+//React.component is a class, NOT a component --> from here, you must subclass in 
+//order to create a component class of your own
 //React.component is a property on the object which was returned by 
-//import React from 'react'
+//importing React from 'react'
+
 class MyComponentClass extends React.Component {
   render() {
     return <h1>Hello world</h1>;
@@ -680,7 +668,7 @@ To make a component class, you use a base class from the React library:`React.Co
 
 What *is* `React.Component`, and how do you use it to make a component class?
 
-`React.Component` is a JavaScript *class*. **To create your own component class, you must *subclass* `React.Component`. You can do this by using the syntax `class YourComponentNameGoesHere extends React.Component {}`.**
+`React.Component` is a JavaScript *class*. **To create your own component class, you must *subclass* `React.Component`. You can do this by using the syntax `class YourComponentNameGoesHere extends React.Component {}`.*
 
 # Name a Component Class
 
@@ -700,10 +688,10 @@ Instructions should be written in typical JS ES2015 class syntax
 
 there is only one property that is included in your instructions: a render method
 
-A render method is a property whose *name*is `render`, and whose *value* is a function. The term "render method" can refer to the entire property, or to just the function part.
+A render method is a property whose *name*  is `render`, and whose *value* is a function. The term "render method" can refer to the entire property, or to just the function part.
 
 ```
-classg ComponentFactory extends React.Component {
+class ComponentFactory extends React.Component {
     render(){}
 }
 ```
@@ -777,7 +765,8 @@ class QuoteMaker extends React.Component{
   }
 };
 
-//to render the HTML nested in the boby class declaration, ReactDOM.render() and a // React component to be used
+//to render the HTML nested in the boby class declaration, ReactDOM.render() and a 
+// React component to be used
 ReactDOM.render(
   <QuoteMaker />,
   document.getElementById('app')
@@ -845,12 +834,13 @@ A `render()` function can also be a fine place to put simple calculations that
 
 ```
 class Random extends React.Component {
-  render() {
-    // First, some logic that must happen
-    // before rendering:
+  render(){
+
+ // before rendering:
     const n = Math.floor(Math.random() * 10 + 1);
     // Next, a return statement
     // using that logic:
+    [;
     return <h1>The number is {n}!</h1>;
   }
 }
